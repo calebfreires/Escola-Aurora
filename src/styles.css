@@ -24,3 +24,17 @@ body *{font-size:max(14px,1em)}
 .program-card:nth-child(3),.value-card:nth-child(3){transition-delay:.17s}
 @media(max-width:640px){.whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;font-size:27px}}
 @media(prefers-reduced-motion:reduce){.reveal-on-scroll{opacity:1;transform:none}.carousel-slide{transition:none}}
+
+/* Keep responsive layouts inside the viewport and let grid children shrink. */
+html,body,#root{width:100%;max-width:100%;min-width:0;overflow-x:clip}
+img,svg,video,canvas{max-width:100%}
+.hero-copy,.intro-content,.section-title,.program-card,.manifesto-copy,.footer-main>div,.page-hero>div,.story>div,.teaching-copy,.space-card,.enroll>*,.faq>*,.contact>*{min-width:0}
+.hero h1,.page-hero h1,.intro h2,.section-title h2,.story h2,.teaching-copy h2,.contact-info h2{overflow-wrap:anywhere}
+.program-info p,.footer-bottom span,.footer-main a,.contact-items p{overflow-wrap:anywhere}
+@media(max-width:640px){
+  .hero-visual{max-width:100%;}
+  .hero-actions{flex-wrap:wrap}
+  .intro-stamp{right:6%;}
+  .footer-bottom{flex-wrap:wrap}
+  .footer-bottom span:last-child{text-align:left}
+}
